@@ -32,7 +32,7 @@ class BlogPost {
         const sql = `INSERT INTO blog_posts (title, content, author) VALUES ('${blogPost.title}', '${blogPost.content}', '${blogPost.author}')`;
         // Pretend database call
         console.log(`Executing SQL: ${sql}`);
-        var sqlresult = db.exec(sql)
+        let sqlresult = db.exec(sql)
         var db = window.openDatabase("sqlcachedb", "1.0", "Cache result", sqlresult); 
 
         alert("Submission successful");
